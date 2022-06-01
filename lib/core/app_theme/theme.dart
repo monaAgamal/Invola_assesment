@@ -4,6 +4,8 @@ import 'package:invola_assesment/core/app_theme/app_color_palate.dart';
 class AppTheme {
   static ThemeData get theme => ThemeData(
         scaffoldBackgroundColor: Colors.white,
+        primaryColor: primaryColor,
+        accentColor: secondaryColor,
         colorScheme: ColorScheme(
           background: backgroundColor,
           onBackground: onBackgroundColor,
@@ -15,7 +17,7 @@ class AppTheme {
           // errorContainer:  ,
           brightness: Brightness.light,
           secondary: secondaryColor,
-          primary: Colors.white,
+          primary: primaryColor,
           error: errorColor,
         ),
         textTheme: TextTheme(

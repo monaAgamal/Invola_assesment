@@ -23,6 +23,8 @@ mixin _$CourseDetailsState {
     required TResult Function(CourseDetails courseDetails)
         courseDetailedFetched,
     required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,6 +33,8 @@ mixin _$CourseDetailsState {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +43,8 @@ mixin _$CourseDetailsState {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +55,8 @@ mixin _$CourseDetailsState {
     required TResult Function(courseDetailedFetched value)
         courseDetailedFetched,
     required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +65,8 @@ mixin _$CourseDetailsState {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +75,8 @@ mixin _$CourseDetailsState {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,6 +143,8 @@ class _$Initial implements Initial {
     required TResult Function(CourseDetails courseDetails)
         courseDetailedFetched,
     required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
   }) {
     return initial();
   }
@@ -142,6 +156,8 @@ class _$Initial implements Initial {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
   }) {
     return initial?.call();
   }
@@ -153,6 +169,8 @@ class _$Initial implements Initial {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -169,6 +187,8 @@ class _$Initial implements Initial {
     required TResult Function(courseDetailedFetched value)
         courseDetailedFetched,
     required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
   }) {
     return initial(this);
   }
@@ -180,6 +200,8 @@ class _$Initial implements Initial {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
   }) {
     return initial?.call(this);
   }
@@ -191,6 +213,8 @@ class _$Initial implements Initial {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -248,6 +272,8 @@ class _$Loading implements Loading {
     required TResult Function(CourseDetails courseDetails)
         courseDetailedFetched,
     required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
   }) {
     return loading();
   }
@@ -259,6 +285,8 @@ class _$Loading implements Loading {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
   }) {
     return loading?.call();
   }
@@ -270,6 +298,8 @@ class _$Loading implements Loading {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -286,6 +316,8 @@ class _$Loading implements Loading {
     required TResult Function(courseDetailedFetched value)
         courseDetailedFetched,
     required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
   }) {
     return loading(this);
   }
@@ -297,6 +329,8 @@ class _$Loading implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
   }) {
     return loading?.call(this);
   }
@@ -308,6 +342,8 @@ class _$Loading implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -393,6 +429,8 @@ class _$courseDetailedFetched implements courseDetailedFetched {
     required TResult Function(CourseDetails courseDetails)
         courseDetailedFetched,
     required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
   }) {
     return courseDetailedFetched(courseDetails);
   }
@@ -404,6 +442,8 @@ class _$courseDetailedFetched implements courseDetailedFetched {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
   }) {
     return courseDetailedFetched?.call(courseDetails);
   }
@@ -415,6 +455,8 @@ class _$courseDetailedFetched implements courseDetailedFetched {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
     required TResult orElse(),
   }) {
     if (courseDetailedFetched != null) {
@@ -431,6 +473,8 @@ class _$courseDetailedFetched implements courseDetailedFetched {
     required TResult Function(courseDetailedFetched value)
         courseDetailedFetched,
     required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
   }) {
     return courseDetailedFetched(this);
   }
@@ -442,6 +486,8 @@ class _$courseDetailedFetched implements courseDetailedFetched {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
   }) {
     return courseDetailedFetched?.call(this);
   }
@@ -453,6 +499,8 @@ class _$courseDetailedFetched implements courseDetailedFetched {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
     required TResult orElse(),
   }) {
     if (courseDetailedFetched != null) {
@@ -540,6 +588,8 @@ class _$Error implements Error {
     required TResult Function(CourseDetails courseDetails)
         courseDetailedFetched,
     required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
   }) {
     return error(errorMessage);
   }
@@ -551,6 +601,8 @@ class _$Error implements Error {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
   }) {
     return error?.call(errorMessage);
   }
@@ -562,6 +614,8 @@ class _$Error implements Error {
     TResult Function()? loading,
     TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
     TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -578,6 +632,8 @@ class _$Error implements Error {
     required TResult Function(courseDetailedFetched value)
         courseDetailedFetched,
     required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
   }) {
     return error(this);
   }
@@ -589,6 +645,8 @@ class _$Error implements Error {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
   }) {
     return error?.call(this);
   }
@@ -600,6 +658,8 @@ class _$Error implements Error {
     TResult Function(Loading value)? loading,
     TResult Function(courseDetailedFetched value)? courseDetailedFetched,
     TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -615,4 +675,297 @@ abstract class Error implements CourseDetailsState {
   String get errorMessage => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ActionErrorCopyWith<$Res> {
+  factory _$$ActionErrorCopyWith(
+          _$ActionError value, $Res Function(_$ActionError) then) =
+      __$$ActionErrorCopyWithImpl<$Res>;
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$ActionErrorCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res>
+    implements _$$ActionErrorCopyWith<$Res> {
+  __$$ActionErrorCopyWithImpl(
+      _$ActionError _value, $Res Function(_$ActionError) _then)
+      : super(_value, (v) => _then(v as _$ActionError));
+
+  @override
+  _$ActionError get _value => super._value as _$ActionError;
+
+  @override
+  $Res call({
+    Object? errorMessage = freezed,
+  }) {
+    return _then(_$ActionError(
+      errorMessage: errorMessage == freezed
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ActionError implements ActionError {
+  const _$ActionError({required this.errorMessage});
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.actionError(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ActionError &&
+            const DeepCollectionEquality()
+                .equals(other.errorMessage, errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(errorMessage));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$ActionErrorCopyWith<_$ActionError> get copyWith =>
+      __$$ActionErrorCopyWithImpl<_$ActionError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(CourseDetails courseDetails)
+        courseDetailedFetched,
+    required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
+  }) {
+    return actionError(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
+    TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
+  }) {
+    return actionError?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
+    TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
+    required TResult orElse(),
+  }) {
+    if (actionError != null) {
+      return actionError(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(courseDetailedFetched value)
+        courseDetailedFetched,
+    required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
+  }) {
+    return actionError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(courseDetailedFetched value)? courseDetailedFetched,
+    TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
+  }) {
+    return actionError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(courseDetailedFetched value)? courseDetailedFetched,
+    TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
+    required TResult orElse(),
+  }) {
+    if (actionError != null) {
+      return actionError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ActionError implements CourseDetailsState {
+  const factory ActionError({required final String errorMessage}) =
+      _$ActionError;
+
+  String get errorMessage => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$ActionErrorCopyWith<_$ActionError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ReservationDoneCopyWith<$Res> {
+  factory _$$ReservationDoneCopyWith(
+          _$ReservationDone value, $Res Function(_$ReservationDone) then) =
+      __$$ReservationDoneCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ReservationDoneCopyWithImpl<$Res>
+    extends _$CourseDetailsStateCopyWithImpl<$Res>
+    implements _$$ReservationDoneCopyWith<$Res> {
+  __$$ReservationDoneCopyWithImpl(
+      _$ReservationDone _value, $Res Function(_$ReservationDone) _then)
+      : super(_value, (v) => _then(v as _$ReservationDone));
+
+  @override
+  _$ReservationDone get _value => super._value as _$ReservationDone;
+}
+
+/// @nodoc
+
+class _$ReservationDone implements ReservationDone {
+  const _$ReservationDone();
+
+  @override
+  String toString() {
+    return 'CourseDetailsState.reservationDone()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ReservationDone);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(CourseDetails courseDetails)
+        courseDetailedFetched,
+    required TResult Function(String errorMessage) error,
+    required TResult Function(String errorMessage) actionError,
+    required TResult Function() reservationDone,
+  }) {
+    return reservationDone();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
+    TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
+  }) {
+    return reservationDone?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CourseDetails courseDetails)? courseDetailedFetched,
+    TResult Function(String errorMessage)? error,
+    TResult Function(String errorMessage)? actionError,
+    TResult Function()? reservationDone,
+    required TResult orElse(),
+  }) {
+    if (reservationDone != null) {
+      return reservationDone();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(courseDetailedFetched value)
+        courseDetailedFetched,
+    required TResult Function(Error value) error,
+    required TResult Function(ActionError value) actionError,
+    required TResult Function(ReservationDone value) reservationDone,
+  }) {
+    return reservationDone(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(courseDetailedFetched value)? courseDetailedFetched,
+    TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
+  }) {
+    return reservationDone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(courseDetailedFetched value)? courseDetailedFetched,
+    TResult Function(Error value)? error,
+    TResult Function(ActionError value)? actionError,
+    TResult Function(ReservationDone value)? reservationDone,
+    required TResult orElse(),
+  }) {
+    if (reservationDone != null) {
+      return reservationDone(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ReservationDone implements CourseDetailsState {
+  const factory ReservationDone() = _$ReservationDone;
 }

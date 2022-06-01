@@ -14,4 +14,9 @@ abstract class CourseDetailsState with _$CourseDetailsState {
 
   const factory CourseDetailsState.error({required String errorMessage}) =
       Error;
+
+  const factory CourseDetailsState.actionError({required String errorMessage}) =
+      ActionError;
+
+  const factory CourseDetailsState.reservationDone() = ReservationDone;
 }

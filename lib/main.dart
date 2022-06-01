@@ -6,6 +6,7 @@ import 'package:invola_assesment/features/course_details/presentation/cubit/cour
 import 'package:invola_assesment/features/course_details/presentation/pages/course_details_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,12 @@ void main() async {
   );
   await configure();
   configure();
-  runApp(const MyApp());
+  runApp(
+      const MyApp()
+    // DevicePreview(
+    //   builder: (context) => const MyApp(), // Wrap your app
+    // ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -26,6 +32,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // useInheritedMediaQuery: true,
+      // locale: DevicePreview.locale(context),
+      // builder: DevicePreview.appBuilder,
       title: 'Invola Task',
       theme: AppTheme.theme,
       localizationsDelegates: const [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ErrorWidget extends StatelessWidget {
   final String errorMessage;
@@ -14,9 +15,8 @@ class ErrorWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(
-            Icons.error_outline,
-            size: 84,
+          SvgPicture.asset(
+            'assets/svg/error.svg',
           ),
           const SizedBox(height: 12),
           Text(

@@ -10,12 +10,22 @@ class CourseDetailsCubit extends Cubit<CourseDetailsState> {
   CourseDetailsCubit(this.useCase) : super(const CourseDetailsState.initial());
 
   void fetchCourseDetails() async {
+    emit(const CourseDetailsState.loading());
     final result = await useCase();
     emit(
       result.fold(
-        (failure) => CourseDetailsState.error(errorMessage: failure.toString()),
+        (failure) => const CourseDetailsState.error(
+            errorMessage: 'حدث خطأ ما الرجاء المححاولة لاحقاً'),
         (data) => CourseDetailsState.courseDetailedFetched(courseDetails: data),
       ),
     );
+  }
+
+  void mockReservationAction() async {
+    emit(const CourseDetailsState.loading());
+    Future.delayed(const Duration(
+      seconds: 2,
+    ));
+    emit(const CourseDetailsState.reservationDone());
   }
 }
