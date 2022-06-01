@@ -7,8 +7,8 @@ abstract class AppModule {
   Dio get dio {
     final client = Dio(
       BaseOptions(
-        connectTimeout: 30000,
-        receiveTimeout: 30000,
+        // connectTimeout: 30000,
+        // receiveTimeout: 30000,
         baseUrl: "https://run.mocky.io",
         contentType: "application/json",
       ),

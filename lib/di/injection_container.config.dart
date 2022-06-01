@@ -31,7 +31,7 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
   final appModule = _$AppModule();
   gh.lazySingleton<_i3.Dio>(() => appModule.dio);
-  gh.factory<_i4.CourseDetailsApiService>(
+  gh.lazySingleton<_i4.CourseDetailsApiService>(
       () => _i4.CourseDetailsApiService(get<_i3.Dio>()));
   gh.lazySingleton<_i5.CourseDetailsDataSource>(() =>
       _i6.CourseDetailsDataSourceImpl(get<_i4.CourseDetailsApiService>()));

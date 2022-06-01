@@ -133,8 +133,9 @@ class CourseDetailsWidget extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(height: 8),
         Padding(
-          padding: const EdgeInsets.only(right: 60.0),
+          padding: const EdgeInsets.only(right: 12.0),
           child: Text(courseDetails.trainerInfo),
         ),
         const Divider(),

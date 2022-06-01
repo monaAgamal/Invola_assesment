@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:invola_assesment/core/app_theme/app_color_palate.dart';
 
 class AppTheme {
@@ -19,6 +18,10 @@ class AppTheme {
           primary: Colors.white,
           error: errorColor,
         ),
-        textTheme: TextTheme(),
+        textTheme: TextTheme(
+          bodyText2: TextStyle(color: textColor),
+          bodyText1: TextStyle(color: textColor),
+        ),
+        dividerColor: dividerColor,
       );
 }
