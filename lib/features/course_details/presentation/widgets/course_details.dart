@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:invola_assesment/features/course_details/domain/entities/course_details.dart';
 import 'package:invola_assesment/features/course_details/presentation/widgets/main_button.dart';
 import 'package:invola_assesment/features/course_details/presentation/widgets/image_slider.dart';
+import 'package:invola_assesment/features/address_on_map/presentation/pages/map_page.dart';
 
 class CourseDetailsWidget extends StatelessWidget {
   final CourseDetails courseDetails;
@@ -15,7 +18,13 @@ class CourseDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateFormatter = DateFormat.MMMEd();
+    final dateFormatter = DateFormat.MMMEd('ar');
+    final String timeFormat =
+        DateFormat("HH:mm a", "ar").format(courseDetails.courseDate);
+    final time = timeFormat.contains(RegExp(r'م'))
+        ? timeFormat.replaceAll(RegExp(r'م'), "مساءاً")
+        : timeFormat.replaceAll(RegExp(r'ص'), "صباحاً");
+
     return ListView(
       children: [
         SizedBox(
@@ -42,7 +51,7 @@ class CourseDetailsWidget extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 12),
+        const Divider(),
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -50,20 +59,40 @@ class CourseDetailsWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(Icons.calendar_month),
+                  Icon(
+                    Icons.calendar_month,
+                    color: Colors.black.withOpacity(0.5),
+                  ),
                   const SizedBox(width: 12),
-                  Text(
-                    dateFormatter.format(courseDetails.courseDate),
+                  Expanded(
+                    child: Text(
+                      "${dateFormatter.format(courseDetails.courseDate)},$time",
+                    ),
                   ),
                 ],
               ),
+              const SizedBox(height: 8),
               GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => MapPage(
+                        position: courseDetails.courseLocation,
+                      ),
+                    ),
+                  );
+                },
                 child: Row(
                   children: [
                     SvgPicture.asset(
                       'assets/svg/location.svg',
                       color: Colors.black,
+                      height: 24,
+                      width: 24,
                     ),
                     const SizedBox(width: 12),
                     Text(
@@ -83,9 +112,13 @@ class CourseDetailsWidget extends StatelessWidget {
               CircleAvatar(
                 minRadius: 20,
                 maxRadius: 20,
-                backgroundColor: Colors.red,
-                child: Image.network(
-                  courseDetails.trainerImg,
+                backgroundColor: Colors.transparent,
+                child: CachedNetworkImage(
+                  imageUrl: courseDetails.trainerImg,
+                  errorWidget: (_, __, ___) =>
+                      SvgPicture.asset('assets/svg/user.svg'),
+                  placeholder: (_, __) =>
+                      SvgPicture.asset('assets/svg/user.svg'),
                 ),
               ),
               const SizedBox(width: 12),
