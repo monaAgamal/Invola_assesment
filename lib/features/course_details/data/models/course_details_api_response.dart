@@ -102,7 +102,7 @@ class ReserveType {
   final int id;
   final String name;
   final int count;
-  final double price;
+  final int price;
 
   ReserveType({
     required this.id,

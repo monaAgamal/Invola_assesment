@@ -5,7 +5,7 @@ import 'package:injectable/injectable.dart';
 part 'course_details_api_service.g.dart';
 
 @RestApi()
-@lazySingleton
+@injectable
 abstract class CourseDetailsApiService
 {
   @factoryMethod

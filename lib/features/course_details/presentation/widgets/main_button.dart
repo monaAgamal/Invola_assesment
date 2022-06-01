@@ -20,11 +20,14 @@ class MainButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
         ),
-        child: Text(
-          label,
-          style: Theme.of(context).textTheme.bodyText2?.copyWith(
-                color: Theme.of(context).colorScheme.primary,
-              ),
+        child: Center(
+          child: Text(
+            label,
+            style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
       ),
     );

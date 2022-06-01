@@ -2,12 +2,9 @@ import 'package:equatable/equatable.dart';
 
 class ReserveType extends Equatable {
   final int id;
-
   final String name;
-
   final int count;
-
-  final double price;
+  final int price;
 
   const ReserveType({
     required this.id,
