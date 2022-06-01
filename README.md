@@ -12,3 +12,5 @@
 - I have used bloc as state management
 - All Exception is handled on Data layer 
 - In domain layer Exception is decoded to Failure to be emitted in presentation
+- All colors is collected in one file
+ 
