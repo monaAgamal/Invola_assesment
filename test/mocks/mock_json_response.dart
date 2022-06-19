@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:invola_assesment/features/course_details/data/models/course_details_api_response.dart';
 
 final fakeCourseDetailsApiResponseJson = CourseDetailsApiResponse(
@@ -47,3 +48,5 @@ final fakeCourseDetailsApiResponse = CourseDetailsApiResponse(
   questionnaire: "cc",
   latitude: "122",
 );
+
+
