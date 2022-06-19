@@ -18,10 +18,10 @@ void main() async {
   await configure();
   configure();
   runApp(
-      const MyApp()
-    // DevicePreview(
-    //   builder: (context) => const MyApp(), // Wrap your app
-    // ),
+      // const MyApp()
+    DevicePreview(
+      builder: (context) => const MyApp(), // Wrap your app
+    ),
   );
 }
 
@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // useInheritedMediaQuery: true,
-      // locale: DevicePreview.locale(context),
-      // builder: DevicePreview.appBuilder,
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       title: 'Invola Task',
       theme: AppTheme.theme,
       localizationsDelegates: const [
